@@ -635,7 +635,7 @@ impl Connection {
         let mut cb = Client::builder()
             .timeout(timeout)
             .connect_timeout(connect_timeout)
-            .redirect(Policy::none());
+            .redirect(Policy::none())
             .use_rustls_tls()
             .tcp_keepalive(Some(Duration::from_secs(5 * 60)))
             .pool_max_idle_per_host(pool_max_idle_per_host);
